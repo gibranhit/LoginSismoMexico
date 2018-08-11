@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">LoginSismos</string>
+    <string name="txt_privacidad">Al acceder aceptas los <i>terminos y condiciones</i> ,\ny el <i>Aviso de privacidad</i></string>
+    <string name="txt_privacidad_acepted">He leido y acepto las   <i>condicciones\nde servicio</i> y <i>Aviso de privacidad</i> </string>
+    <string name="txt_recuperar_contrasena">Recuperar Contraseña</string>
+    <string name="txt_email">Email</string>
+    <string name="txt_passwprd">Contraseña</string>
+    <string name="txt_passwprd_confirm">Confirmar contraseña</string>
+    <string name="txt_user">Usuario</string>
+    <string name="txt_registrarte">Registrarse</string>
+    <string name="txt_login">iniciar sesión</string>
+</resources>

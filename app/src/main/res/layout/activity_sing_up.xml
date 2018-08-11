@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/degradado"
+    tools:context=".SingUp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center">
+
+        <TextView
+            android:id="@+id/login_title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="22dp"
+            android:layout_marginBottom="16dp"
+            android:gravity="center_horizontal"
+            android:text="logo Login"
+            android:textColor="#fff"
+            android:textSize="26sp"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/login_title"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="27dp"
+            android:layout_marginRight="30dp"
+            android:background="#fff"
+            android:elevation="4dp"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="450dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingTop="20dp"
+                android:paddingBottom="10dp">
+
+                <garnachas.gibran.com.loginsismos.MaterialTextField
+                    android:id="@+id/et_user"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    app:mtf_backgroundColor="@color/blue"
+                    app:mtf_image="@drawable/user"
+                    app:mtf_labelColor="@color/blue">
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/txt_user"
+                        android:maxLines="1"
+                        android:textColor="@color/white"
+                        android:textSize="15sp" />
+
+                </garnachas.gibran.com.loginsismos.MaterialTextField>
+
+
+                <garnachas.gibran.com.loginsismos.MaterialTextField
+                    android:id="@+id/et_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    app:mtf_backgroundColor="@color/blue"
+                    app:mtf_image="@drawable/email"
+                    app:mtf_labelColor="@color/blue">
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/txt_email"
+                        android:maxLines="1"
+                        android:textColor="@color/white"
+                        android:textSize="15sp" />
+
+                </garnachas.gibran.com.loginsismos.MaterialTextField>
+
+
+                <garnachas.gibran.com.loginsismos.MaterialTextField
+                    android:id="@+id/et_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    app:mtf_backgroundColor="@color/blue"
+                    app:mtf_image="@drawable/ic_lock_black_24dp"
+                    app:mtf_labelColor="@color/blue">
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/txt_passwprd"
+                        android:inputType="textPassword"
+                        android:maxLines="1"
+                        android:textColor="@color/white"
+                        android:textSize="15sp" />
+
+                </garnachas.gibran.com.loginsismos.MaterialTextField>
+
+                <garnachas.gibran.com.loginsismos.MaterialTextField
+                    android:id="@+id/et_password_confirm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    app:mtf_backgroundColor="@color/blue"
+                    app:mtf_image="@drawable/ic_lock_black_24dp"
+                    app:mtf_labelColor="@color/blue">
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/txt_passwprd_confirm"
+                        android:inputType="textPassword"
+                        android:textColor="@color/white"
+                        android:textSize="15sp" />
+
+                </garnachas.gibran.com.loginsismos.MaterialTextField>
+
+                <CheckBox
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="5dp"
+                    android:buttonTint="@color/blue_strong"
+                    android:fontFamily="@font/robotomedium"
+                    android:text="@string/txt_privacidad_acepted"
+                    android:textColor="@color/blue_strong" />
+
+                <Button
+                    style="@style/Widget.AppCompat.Button"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/btn_redondo"
+                    android:drawableLeft="@drawable/key"
+                    android:fontFamily="@font/robotobold"
+                    android:gravity="center"
+                    android:paddingLeft="30dp"
+                    android:paddingRight="30dp"
+                    android:text="@string/txt_registrarte"
+                    android:textColor="@color/white"
+
+                    />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <ImageButton
+            android:id="@+id/user_profile_photo"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_below="@+id/login_title"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/user_profile_image_background"
+            android:elevation="4dp"
+            android:src="@drawable/logo_user" />
+
+
+    </RelativeLayout>
+</ScrollView>
