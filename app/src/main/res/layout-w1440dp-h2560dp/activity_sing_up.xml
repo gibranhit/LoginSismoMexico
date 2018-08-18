@@ -16,6 +16,7 @@
             android:id="@+id/login_title"
             android:layout_width="250dp"
             android:layout_height="70dp"
+            android:layout_marginBottom="16dp"
             android:layout_marginTop="22dp"
             android:layout_centerHorizontal="true"
             android:background="@drawable/header"
@@ -26,7 +27,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/login_title"
             android:layout_marginLeft="30dp"
-            android:layout_marginTop="17dp"
+            android:layout_marginTop="27dp"
             android:layout_marginRight="30dp"
             android:background="#fff"
             android:elevation="4dp"
@@ -129,8 +130,7 @@
                     android:buttonTint="@color/blue_strong"
                     android:fontFamily="@font/robotomedium"
                     android:text="@string/txt_privacidad_acepted"
-                    android:textColor="@color/blue_strong"
-                    android:textSize="13sp"/>
+                    android:textColor="@color/blue_strong" />
 
                 <Button
                     style="@style/Widget.AppCompat.Button"
@@ -154,13 +154,13 @@
 
         <ImageButton
             android:id="@+id/user_profile_photo"
-            android:layout_width="70dp"
-            android:layout_height="70dp"
-            android:layout_marginTop="83dp"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_below="@+id/login_title"
             android:layout_centerHorizontal="true"
             android:background="@drawable/user_profile_image_background"
             android:elevation="4dp"
-            android:src="@drawable/user_small" />
+            android:src="@drawable/logo_user" />
 
 
     </RelativeLayout>
