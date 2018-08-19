@@ -89,14 +89,6 @@ public class SingUpFragment extends Fragment {
     @Override
     public void onDetach() {
         super.onDetach();
-        FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
-
-        SingInFragment singInFragment = new SingInFragment();  //this is your new fragment.
-        transaction.replace(R.id.contenedor, singInFragment)
-                .setCustomAnimations(R.anim.slide_out_right, R.anim.slide_in_right,
-                        R.anim.slide_in_left, R.anim.slide_out_left)
-                .show(singInFragment)
-                .addToBackStack(null).commit();
         mListener = null;
     }
 

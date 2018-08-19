@@ -29,12 +29,7 @@ public class MainActivity extends AppCompatActivity implements SingInFragment.On
         FragmentManager fragmentManager = getSupportFragmentManager();
 
         FragmentTransaction transaction = fragmentManager.beginTransaction();
-        transaction.setCustomAnimations(R.anim.slide_in_left, R.anim.slide_out_left,
-                R.anim.slide_out_right, R.anim.slide_in_right);
-
         transaction.replace(R.id. contenedor, singInFragment );
-        transaction.addToBackStack(null);
-        transaction.show(singInFragment);
         transaction.commit();
     }
 
