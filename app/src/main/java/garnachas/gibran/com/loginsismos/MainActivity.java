@@ -1,37 +1,31 @@
 package garnachas.gibran.com.loginsismos;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements SingInFragment.OnFragmentInteractionListener,
+        SingUpFragment.OnFragmentInteractionListener,ForgotPasswordFragment.OnFragmentInteractionListener{
 
-    TextView tvRegistrarse, tvForgotPassword;
+    SingInFragment singInFragment;
+    SingUpFragment singUpFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        tvRegistrarse = findViewById(R.id.tv_registrarse);
-        tvForgotPassword = findViewById(R.id.tv_forgot_password);
+        singInFragment = new SingInFragment();
+        singUpFragment = new SingUpFragment();
 
-        tvRegistrarse.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this,SingUp.class));
-                finish();
-            }
-        });
+        getSupportFragmentManager().beginTransaction().replace(R.id.contenedor,singInFragment).commit();
+    }
 
-        tvForgotPassword.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this,ForgotPassword.class));
-                finish();
-            }
-        });
+    @Override
+    public void onFragmentInteraction(Uri uri) {
+
     }
 }
