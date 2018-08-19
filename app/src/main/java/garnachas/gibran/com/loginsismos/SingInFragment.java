@@ -75,11 +75,14 @@ public class SingInFragment extends Fragment {
         tv_registrarse.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
+
                 SingUpFragment singUpFragment = new SingUpFragment();  //this is your new fragment.
-                getActivity().getSupportFragmentManager()
-                        .beginTransaction()
-                        .replace(R.id.contenedor, singUpFragment)
-                        .addToBackStack(null).commitAllowingStateLoss();
+                transaction.replace(R.id.contenedor, singUpFragment)
+                        .setCustomAnimations(R.anim.slide_out_right, R.anim.slide_in_right,
+                                R.anim.slide_in_left, R.anim.slide_out_left)
+                        .show(singUpFragment)
+                        .addToBackStack(null).commit();
             }
         });
 
@@ -87,11 +90,13 @@ public class SingInFragment extends Fragment {
         tv_forgot_password.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
                 ForgotPasswordFragment forgotPasswordFragment = new ForgotPasswordFragment();  //this is your new fragment.
-                getActivity().getSupportFragmentManager()
-                        .beginTransaction()
-                        .replace(R.id.contenedor, forgotPasswordFragment)
-                        .addToBackStack(null).commitAllowingStateLoss();
+                transaction.replace(R.id.contenedor, forgotPasswordFragment)
+                        .setCustomAnimations(R.anim.slide_in_left, R.anim.slide_out_left,
+                                R.anim.slide_out_right, R.anim.slide_in_right)
+                        .show(forgotPasswordFragment)
+                        .addToBackStack(null).commit();
             }
         });
 
